@@ -15,6 +15,8 @@
 #
 
 ifeq ($(TARGET_SOC),exynos5410)
+ifeq ($(TARGET_SLSI_VARIANT),insignal)
+
 exynos5410_dirs := \
 	libhwjpeg \
 	mobicore
@@ -25,4 +27,5 @@ endif
 
 include $(call all-named-subdir-makefiles,$(exynos5410_dirs))
 
+endif
 endif
